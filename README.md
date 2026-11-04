@@ -1,8 +1,19 @@
-# diyojenyazilim claude-plugins
+<div align="center">
 
-Claude Code plugins and mods by diyojenyazilim.
+# diyojenyazilim · Claude Code plugins
 
-## Install
+**A small, hand-picked marketplace of plugins and mods for [Claude Code](https://github.com/anthropics/claude-code).**
+
+[![License: MIT](https://img.shields.io/github/license/diyojenyazilim/claude-plugins?color=2F3A4A&labelColor=161B26)](LICENSE)
+
+[Installation](#installation) · [Plugins](#plugins) · [Contributing](#contributing)
+
+</div>
+
+> [!WARNING]
+> Make sure you trust a plugin before installing, updating or using it. Each plugin lives in its own repository and can change over time. Read its source and its README first.
+
+## Installation
 
 Add the marketplace once, then install any plugin from it:
 
@@ -11,7 +22,7 @@ claude plugin marketplace add diyojenyazilim/claude-plugins
 claude plugin install <plugin>@diyojenyazilim
 ```
 
-Inside a session: `/plugin marketplace add diyojenyazilim/claude-plugins` and `/plugin install <plugin>@diyojenyazilim`. If you install while a session is open, run `/reload-plugins` or start a new session.
+Inside a session, use `/plugin marketplace add diyojenyazilim/claude-plugins` and `/plugin install <plugin>@diyojenyazilim`, or browse the catalog with `/plugin > Discover`. If you install while a session is open, run `/reload-plugins` or start a new one.
 
 To pick up new plugins and new versions later:
 
@@ -21,19 +32,44 @@ claude plugin marketplace update diyojenyazilim
 
 ## Plugins
 
-| Plugin | What it does | Repository |
+| Plugin | What it does | Install |
 | --- | --- | --- |
-| `pixel-agent` | A pixel-art agent above your prompt that reacts to Claude Code, with a small companion for every running subagent. | [diyojenyazilim/pixel-agents](https://github.com/diyojenyazilim/pixel-agents) |
+| [`pixel-agents`](https://github.com/diyojenyazilim/pixel-agents) | A pixel-art companion above your prompt that reacts to Claude Code, with a small friend for every running subagent. | `/plugin install pixel-agents@diyojenyazilim` |
 
-## Adding a plugin
+### pixel-agents
 
-Each plugin lives in its own repository, with `.claude-plugin/plugin.json` at the repository root. List it here by adding an entry to [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json):
+<div align="center">
+  <img src="assets/pixel-agents.svg" alt="The five pixel-agents characters: Bit, Ghost, Astronaut, Code Wizard and Cloud" width="560" />
+</div>
+
+A Claude Code mod that puts a small pixel-art agent above your prompt. It reacts to what Claude is doing, picks up a prop for the tool at hand, shows how full your context is, and gives every subagent a companion of its own. Five characters, six color themes.
+
+[Read more](https://github.com/diyojenyazilim/pixel-agents#readme)
+
+## How this repository is organized
+
+```text
+.
+├── .claude-plugin/
+│   └── marketplace.json   the catalog Claude Code reads
+├── assets/                images used by this README
+├── LICENSE
+└── README.md
+```
+
+This repository only holds the catalog. The code of each plugin lives in its own repository.
+
+## Contributing
+
+Every plugin is its own public repository with `.claude-plugin/plugin.json` at the root and a license. To list one here, open a pull request that adds an entry to [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json):
 
 ```json
 {
   "name": "my-plugin",
   "source": { "source": "github", "repo": "diyojenyazilim/my-plugin" },
-  "description": "One line that says what it does."
+  "description": "One line that says what it does.",
+  "category": "interface",
+  "keywords": ["mod", "ui"]
 }
 ```
 
@@ -41,4 +77,4 @@ The entry `name` must equal the `name` in the plugin's `plugin.json`. Run `claud
 
 ## License
 
-MIT, see [LICENSE](LICENSE).
+MIT, see [LICENSE](LICENSE). Each plugin carries its own license in its repository.
