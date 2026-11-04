@@ -1,4 +1,4 @@
-# diyojenyazilim plugins
+# diyojenyazilim claude-plugins
 
 Claude Code plugins and mods by diyojenyazilim.
 
@@ -7,11 +7,11 @@ Claude Code plugins and mods by diyojenyazilim.
 Add the marketplace once, then install any plugin from it:
 
 ```bash
-claude plugin marketplace add diyojenyazilim/plugins
+claude plugin marketplace add diyojenyazilim/claude-plugins
 claude plugin install <plugin>@diyojenyazilim
 ```
 
-Inside a session: `/plugin marketplace add diyojenyazilim/plugins` and `/plugin install <plugin>@diyojenyazilim`. If you install while a session is open, run `/reload-plugins` or start a new session.
+Inside a session: `/plugin marketplace add diyojenyazilim/claude-plugins` and `/plugin install <plugin>@diyojenyazilim`. If you install while a session is open, run `/reload-plugins` or start a new session.
 
 To pick up new plugins and new versions later:
 
@@ -23,7 +23,7 @@ claude plugin marketplace update diyojenyazilim
 
 | Plugin | What it does | Repository |
 | --- | --- | --- |
-| `pixel-agent` | A pixel-art agent above your prompt that reacts to Claude Code, with a small companion for every running subagent. | [diyojenyazilim/pixel-agent](https://github.com/diyojenyazilim/pixel-agent) |
+| `pixel-agent` | A pixel-art agent above your prompt that reacts to Claude Code, with a small companion for every running subagent. | [diyojenyazilim/pixel-agents](https://github.com/diyojenyazilim/pixel-agents) |
 
 ## Adding a plugin
 
