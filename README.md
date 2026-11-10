@@ -35,6 +35,7 @@ claude plugin marketplace update diyojenyazilim
 | Plugin | What it does | Install |
 | --- | --- | --- |
 | [`pixel-agents`](https://github.com/diyojenyazilim/pixel-agents) | A pixel-art companion above your prompt that reacts to Claude Code, with a small friend for every running subagent. | `/plugin install pixel-agents@diyojenyazilim` |
+| [`terminal-gui`](https://github.com/diyojenyazilim/terminal-gui) | Restyles tool and agent rows as running/done cards and assistant replies as chat bubbles. | `/plugin install terminal-gui@diyojenyazilim` |
 
 ### pixel-agents
 
@@ -45,6 +46,16 @@ claude plugin marketplace update diyojenyazilim
 A Claude Code mod that puts a small pixel-art agent above your prompt. It reacts to what Claude is doing, picks up a prop for the tool at hand, shows how full your context is, and gives every subagent a companion of its own. Five characters, six color themes.
 
 [Read more](https://github.com/diyojenyazilim/pixel-agents#readme)
+
+### terminal-gui
+
+A Claude Code mod that restyles tool and agent rows as GUI-like cards, with running and finished states told apart, and shows assistant replies as chat bubbles. Requires Claude Code v2.1.287 or later.
+
+```bash
+claude plugin install terminal-gui@diyojenyazilim
+```
+
+[Read more](https://github.com/diyojenyazilim/terminal-gui#readme)
 
 ## How this repository is organized
 
@@ -57,7 +68,7 @@ A Claude Code mod that puts a small pixel-art agent above your prompt. It reacts
 └── README.md
 ```
 
-This repository only holds the catalog. The code of each plugin lives in its own repository.
+This repository holds only the catalog. Every plugin lives in its own repository.
 
 ## Contributing
 

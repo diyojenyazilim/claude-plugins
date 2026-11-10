@@ -1,0 +1,10 @@
+*/.claude-plugin/types/
+node_modules/
+.DS_Store
+Thumbs.db
+.playwright-mcp/
+.serena/
+
+# Her eklenti kendi reposunda yaşar
+terminal-gui/
+pixel-agents/
